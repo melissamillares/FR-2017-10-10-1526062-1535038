@@ -55,7 +55,7 @@ def main():
          print("%s" %request_descompuesto[0])
          reply = http_handle(request_descompuesto[0])
          cs.send(reply)
-	#cs.send(reply.encode('ascii'))
+	 #cs.send(reply.encode('ascii'))
 
          print("\n\nReceived request")
          print("======================")
@@ -85,7 +85,6 @@ def http_handle(request_string):
     # to write additional functions to parse the http request into a nicer data
     # structure (eg a dict), and to easily create http responses.
 
-    # COMPLETE (4)
     # esta funcion DEBE RETORNAR UNA CADENA que contenga el recurso (archivo)
     # que se consulta desde un navegador e.g. http://localhost:2080/index.html
     # En el ejemplo anterior se esta solicitando por el archivo 'index.html'
@@ -131,9 +130,6 @@ def http_handle(request_string):
         answer = headers + data
         f.close()
         return answer
-
-
-    
 
 if __name__ == "__main__":
     sys.exit(main())
