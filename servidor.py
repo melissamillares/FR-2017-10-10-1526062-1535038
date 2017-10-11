@@ -55,6 +55,7 @@ def main():
          print("%s" %request_descompuesto[0])
          reply = http_handle(request_descompuesto[0])
          cs.send(reply)
+         cs.close()
 	 #cs.send(reply.encode('ascii'))
 
          print("\n\nReceived request")
